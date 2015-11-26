@@ -1,7 +1,7 @@
 from util.color import bcolors
 def intro():
     print bcolors.Red + "SYSCORE Lab. CSH"
-    print "################## IF YOU CAN CATCH ME (ver 0.1) ################## "
+    print "################## Catch me if Y0u C@n (ver 0.1) ################## "
     print bcolors.Yellow + ":I::;II;::::::::;;::::::::::;IIIII::::;II;;;I;:::;I;;;;III;;"
     print " =::::::::;I;::::::::::::::::::::::::::::::::::::::::::::::I~"
     print " `=::::::i++i:::::::::::::::::::::::::::::::::::::::::::::;I"

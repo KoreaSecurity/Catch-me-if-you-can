@@ -10,11 +10,12 @@ RootDir_conf += '/conf/cmc.conf'
 print str(IYCFM_ROOT)
 config.read(RootDir_conf)
 VM_NAME=config.get("VM","name")
+VM_IP=config.get("VM","ip")
 
 def vm_start():
     cmd="virsh snapshot-revert --domain "+str(VM_NAME)+" --current"
     subprocess.check_output(cmd,shell=True)
-    message="#Start VM NAME: "+str(VM_NAME)
+    message="Start VM NAME: "+str(VM_NAME) +" IP :"+str(VM_IP)
     log.log_yellow(message)
 
 
@@ -22,5 +23,5 @@ def vm_start():
 def vm_shutdown():
     cmd="virsh destroy --domain "+str(VM_NAME)
     subprocess.check_output(cmd,shell=True)
-    message="#Shut Down VM NAME: "+str(VM_NAME)
+    message="Shut Down VM NAME: "+str(VM_NAME)
     log.log_yellow(message)
